@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ### Running the solution demo
 
-To get look at the solution run the script `demo.py`:
+To take a look at the solution run the script `demo.py`:
 ```
 python demo.py
 ```
