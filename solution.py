@@ -48,6 +48,18 @@ class PurchasesCounter:
         return repr_str
 
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-p', '--purchases',
+        help='file with purchases',
+        default='purchases.txt'
+    )
+    args = parser.parse_args()
+    return args
+
+
 if __name__ == "__main__":
-    purchases = PurchasesCounter('purchases.txt')
+    args = parse_args()
+    purchases = PurchasesCounter(args.purchases)
     print(purchases)
