@@ -5,6 +5,11 @@ import argparse
 
 
 class PurchasesGenerator:
+    """
+        Generates random report 
+        about purchases by months
+    """
+
     def __init__(self, types_num, purchases_day_mean, purchases_day_std):
         """
         Arguments:
