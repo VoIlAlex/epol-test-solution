@@ -115,3 +115,4 @@ if __name__ == "__main__":
         output_file=report_file,
         months_number=args.months_number
     )
+    print('[INFO] Purchases are generated.')
