@@ -45,7 +45,6 @@ class PurchasesCounter:
             repr_str += ' ---> '
             repr_str += str(count)
             repr_str += '\n'
-        repr_str += 'Number of purchase types: {}'.format(len(self.purchases))
         return repr_str
 
 

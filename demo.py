@@ -29,4 +29,6 @@ if __name__ == "__main__":
     # in each month
     purchases_counter = PurchasesCounter('purchases.txt')
     print(purchases_counter)
+    types_num_counted = len(purchases_counter.purchases)
     print('Initial number of purchase types: {}'.format(types_num))
+    print('Final Number of purchase types: {}'.format(types_num_counted))
