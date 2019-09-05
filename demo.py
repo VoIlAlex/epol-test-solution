@@ -7,15 +7,15 @@ from purchases_counter import PurchasesCounter
 
 
 if __name__ == "__main__":
-    # number of types
+    # number of ids
     # of purchases to
     # generate
-    types_num = 100
+    ids_num = 100
 
     # generate random
     # report on purchases
     purchases_generator = PurchasesGenerator(
-        types_num=types_num,
+        ids_num=ids_num,
         purchases_day_mean=150,
         purchases_day_std=50
     )
@@ -29,6 +29,6 @@ if __name__ == "__main__":
     # in each month
     purchases_counter = PurchasesCounter('purchases.txt')
     print(purchases_counter)
-    types_num_counted = len(purchases_counter.purchases)
-    print('Initial number of purchase types: {}'.format(types_num))
-    print('Final Number of purchase types: {}'.format(types_num_counted))
+    ids_num_counted = len(purchases_counter.purchases)
+    print('Initial number of purchase ids: {}'.format(ids_num))
+    print('Final Number of purchase ids: {}'.format(ids_num_counted))

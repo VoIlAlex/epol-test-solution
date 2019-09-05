@@ -10,29 +10,29 @@ class PurchasesGenerator:
         about purchases by months
     """
 
-    def __init__(self, types_num, purchases_day_mean, purchases_day_std):
+    def __init__(self, ids_num, purchases_day_mean, purchases_day_std):
         """
         Arguments:
-            types_num {int} -- number of purchases types to generate
+            ids_num {int} -- number of purchases ids to generate
             purchases_day_mean {int} -- average number of purchases per day
             purchases_day_std {int} -- average deviation of purchases number per day
         """
         self.purchases_day_mean = purchases_day_mean
         self.purchases_day_std = purchases_day_std
 
-        # generate purchases types
-        self.purchase_types = []
-        for i in range(types_num):
-            purchase_type = ''
+        # generate purchases ids
+        self.purchase_ids = []
+        for i in range(ids_num):
+            purchase_id = ''
 
             # first letter
-            purchase_type += random.choice(string.ascii_uppercase)
+            purchase_id += random.choice(string.ascii_uppercase)
 
             # 3 random numbers
             for i in range(3):
-                purchase_type += str(random.randint(0, 9))
+                purchase_id += str(random.randint(0, 9))
 
-            self.purchase_types.append(purchase_type)
+            self.purchase_ids.append(purchase_id)
 
     def generate(self, output_file, months_number=12):
         """
@@ -67,7 +67,7 @@ class PurchasesGenerator:
 
             purchases_today = []
             for i in range(purchases_number):
-                random_purchase = random.choice(self.purchase_types)
+                random_purchase = random.choice(self.purchase_ids)
                 purchases_today.append(random_purchase)
 
             month_purchases_message = month_id_name + \
@@ -111,7 +111,7 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
     purchases_generator = PurchasesGenerator(
-        types_num=args.types_number,
+        ids_num=args.ids_number,
         purchases_day_mean=args.mean,
         purchases_day_std=args.std
     )
