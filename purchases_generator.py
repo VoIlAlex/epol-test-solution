@@ -1,6 +1,7 @@
 import random
 import string
 import numpy as np
+import argparse
 
 
 class PurchasesGenerator:
@@ -72,9 +73,9 @@ class PurchasesGenerator:
 
 if __name__ == "__main__":
     purchases_generator = PurchasesGenerator(
-        types_num=10,
-        purchases_day_mean=20,
-        purchases_day_std=5
+        types_num=100,
+        purchases_day_mean=150,
+        purchases_day_std=50
     )
     report_file = open('purchases.txt', 'w+')
     purchases_generator.generate(report_file)
