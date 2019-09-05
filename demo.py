@@ -31,4 +31,4 @@ if __name__ == "__main__":
     print(purchases_counter)
     ids_num_counted = len(purchases_counter.purchases)
     print('Initial number of purchase ids: {}'.format(ids_num))
-    print('Final Number of purchase ids: {}'.format(ids_num_counted))
+    print('Final number of purchase ids: {}'.format(ids_num_counted))
