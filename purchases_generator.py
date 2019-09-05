@@ -71,11 +71,47 @@ class PurchasesGenerator:
             print(month_purchases_message, file=output_file)
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description='Generates random purchases report'
+    )
+    parser.add_argument(
+        '-tn', '--types-number',
+        help='number of purchases types',
+        type=int,
+        default=100
+    )
+    parser.add_argument(
+        '-m', '--mean',
+        help='mean of purchases number per day',
+        type=int,
+        default=150
+    )
+    parser.add_argument(
+        '-s', '--std',
+        help='standard deviation of purchases number per day',
+        type=int,
+        default=50
+    )
+    parser.add_argument(
+        '-mn', '--months-number',
+        help='number of months go generate',
+        type=int,
+        default=12
+    )
+    args = parser.parse_args()
+    return args
+
+
 if __name__ == "__main__":
+    args = parse_args()
     purchases_generator = PurchasesGenerator(
-        types_num=100,
-        purchases_day_mean=150,
-        purchases_day_std=50
+        types_num=args.types_number,
+        purchases_day_mean=args.mean,
+        purchases_day_std=args.std
     )
     report_file = open('purchases.txt', 'w+')
-    purchases_generator.generate(report_file)
+    purchases_generator.generate(
+        output_file=report_file,
+        months_number=args.months_number
+    )
