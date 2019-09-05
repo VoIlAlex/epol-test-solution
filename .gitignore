@@ -1,3 +1,5 @@
 .vscode/
 .idea/
 .pytest_cache
+
+purchases.txt
