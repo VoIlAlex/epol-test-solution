@@ -24,7 +24,7 @@
 
 ### Getting started
 
-This solution include the following scripts:
+This solution includes the following scripts:
 
 `purchases_generator.py` - script for generation random report about purchases.
 
