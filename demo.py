@@ -3,7 +3,7 @@
 """
 
 from purchases_generator import PurchasesGenerator
-from solution import PurchasesCounter
+from purchases_counter import PurchasesCounter
 
 
 if __name__ == "__main__":
